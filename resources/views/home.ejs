@@ -6,7 +6,11 @@
       <button
         class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary"
       >
-        Order Now
+        <a
+          href="#items"
+          class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary"
+          >Order Now</a
+        >
       </button>
     </div>
     <div class="w-5/12">
@@ -14,8 +18,8 @@
     </div>
   </div>
 </section>
-<section class="menu container mx-auto px-16 py-8">
-  <h1 class="text-xl font-bold mb-8">All Pizzas</h1>
+<section class="menu container mx-auto px-16 py-8" id="items">
+  <h1 class="text-xl font-bold mb-8">All Items</h1>
   <div class="grid grid-cols-4 col-gap-12 row-gap-16">
     <% pizzas.forEach(function(pizza){ %>
     <div class="w-64">
