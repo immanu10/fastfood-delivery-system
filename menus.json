@@ -1,0 +1,253 @@
+[{
+  "_id": {
+    "$oid": "5fb4be69dba24037ac3c912c"
+  },
+  "name": "Veggie Burger",
+  "image": "burger.png",
+  "price": "100",
+  "size": "small",
+  "category": "burger"
+},{
+  "_id": {
+    "$oid": "5fb4bf27dba24037ac3c912d"
+  },
+  "name": "Ice cream vanila strawberry ",
+  "image": "icecream.png",
+  "price": "350",
+  "size": "medium",
+  "category": "icecream"
+},{
+  "_id": {
+    "$oid": "5fb4bfb9dba24037ac3c912e"
+  },
+  "name": "Veggie pizza",
+  "image": "pizza.png",
+  "price": "200",
+  "size": "medium",
+  "category": "pizza"
+},{
+  "_id": {
+    "$oid": "5fb4c1f8dba24037ac3c912f"
+  },
+  "name": "Mushroom Burger",
+  "image": "burger3.png",
+  "price": "350",
+  "size": "large",
+  "category": "burger"
+},{
+  "_id": {
+    "$oid": "5fb4c2d6dba24037ac3c9131"
+  },
+  "name": "Ice cream chocolate",
+  "image": "icecream2.png",
+  "price": "200",
+  "size": "small",
+  "category": "icecream"
+},{
+  "_id": {
+    "$oid": "5fb4c301dba24037ac3c9132"
+  },
+  "name": "Chiken Burger",
+  "image": "burger2.png",
+  "price": "250",
+  "size": "medium",
+  "category": "burger"
+},{
+  "_id": {
+    "$oid": "5fb4c3a7dba24037ac3c9133"
+  },
+  "name": "Margherita",
+  "image": "pizza2.png",
+  "price": "300",
+  "size": "medium",
+  "category": "pizza"
+},{
+  "_id": {
+    "$oid": "5fb4c41fdba24037ac3c9134"
+  },
+  "name": "veg and non-veg",
+  "image": "pizza3.png",
+  "price": "500",
+  "size": "medium",
+  "category": "pizza"
+},{
+  "_id": {
+    "$oid": "5fb4c469dba24037ac3c9135"
+  },
+  "name": "Carbonara",
+  "image": "pizza4.png",
+  "price": "400",
+  "size": "small",
+  "category": "pizza"
+},{
+  "_id": {
+    "$oid": "5fb4c52cdba24037ac3c9136"
+  },
+  "name": "French fries",
+  "image": "fries.png",
+  "price": "50",
+  "size": "small",
+  "category": "combo"
+},{
+  "_id": {
+    "$oid": "5fb4c6eddba24037ac3c9138"
+  },
+  "name": "Normal coke",
+  "image": "cola.png",
+  "price": "50",
+  "size": "small",
+  "category": "cooldrink"
+},{
+  "_id": {
+    "$oid": "5fb4c710dba24037ac3c9139"
+  },
+  "name": "Diet coke",
+  "image": "cola1.png",
+  "price": "60",
+  "size": "small",
+  "category": "cooldrink"
+},{
+  "_id": {
+    "$oid": "5fb4c7aedba24037ac3c913a"
+  },
+  "name": "Whopper Sandwich McDs Fries Cheeseburger",
+  "image": "combo.png",
+  "price": "800",
+  "size": "large",
+  "category": "combo"
+},{
+  "_id": {
+    "$oid": "5fb4c7eedba24037ac3c913b"
+  },
+  "name": "Cheeseburger Nugget Fries Burger",
+  "image": "combo1.png",
+  "price": "850",
+  "size": "large",
+  "category": "combo"
+},{
+  "_id": {
+    "$oid": "5fb4c840dba24037ac3c913c"
+  },
+  "name": "Whopper Hamburger Fries French coke",
+  "image": "combo2.png",
+  "price": "600",
+  "size": "medium",
+  "category": "combo"
+},{
+  "_id": {
+    "$oid": "5fb4c97bdba24037ac3c913d"
+  },
+  "name": "Cheeseburger with FrenchFries and coke ",
+  "image": "combo3.png",
+  "price": "650",
+  "size": "medium",
+  "category": "combo"
+},{
+  "_id": {
+    "$oid": "5fb4cb1cdba24037ac3c913e"
+  },
+  "name": "paneer burger ",
+  "image": "burger1.png",
+  "price": "150",
+  "size": "medium",
+  "category": "burger"
+},{
+  "_id": {
+    "$oid": "5fb4cb3ddba24037ac3c913f"
+  },
+  "name": "Ice cream strawberry ",
+  "image": "icecream1.png",
+  "price": "300",
+  "size": "medium",
+  "category": "icecream"
+},{
+  "_id": {
+    "$oid": "5fb4cb53dba24037ac3c9140"
+  },
+  "name": "Pepperoni ",
+  "image": "pizzapepe.png",
+  "price": "200",
+  "size": "small",
+  "category": "pizza"
+},{
+  "_id": {
+    "$oid": "5fb4cb7cdba24037ac3c9141"
+  },
+  "name": "Ice cream special ",
+  "image": "icecream3.png",
+  "price": "400",
+  "size": "medium",
+  "category": "icecream"
+},{
+  "_id": {
+    "$oid": "5fe1c41f0700305ceb009ab5"
+  },
+  "name": "Dark Choco shake",
+  "image": "shake.png",
+  "price": "200",
+  "category": "shakes",
+  "size": "small"
+},{
+  "_id": {
+    "$oid": "5fe1c5bf0700305ceb009ab8"
+  },
+  "name": "Chocolate Shake",
+  "image": "shake2.png",
+  "price": "150",
+  "size": "small",
+  "category": "shakes"
+},{
+  "_id": {
+    "$oid": "5fe1c77b0700305ceb009abc"
+  },
+  "name": "Oreo Shake",
+  "image": "shake3.png",
+  "price": "180",
+  "size": "small",
+  "category": "shakes"
+},{
+  "_id": {
+    "$oid": "5fe1c83efb710b31b4ef844d"
+  },
+  "name": "White Choco Shake",
+  "image": "shake4.png",
+  "price": "100",
+  "size": "small",
+  "category": "shakes"
+},{
+  "_id": {
+    "$oid": "5fe1c84ffb710b31b4ef844e"
+  },
+  "name": "Mango Shake",
+  "image": "shake5.png",
+  "price": "100",
+  "size": "small",
+  "category": "shakes"
+},{
+  "_id": {
+    "$oid": "5fe1c923fb710b31b4ef844f"
+  },
+  "name": "Sprite",
+  "image": "cola2.png",
+  "price": "60",
+  "size": "small",
+  "category": "cooldrink"
+},{
+  "_id": {
+    "$oid": "5fe1c93ffb710b31b4ef8450"
+  },
+  "name": "Sprite zero",
+  "image": "cola3.png",
+  "price": "50",
+  "size": "small",
+  "category": "cooldrink"
+},{
+  "_id": {
+    "$oid": "5fe1c955fb710b31b4ef8451"
+  },
+  "name": "Coke 2L",
+  "image": "cola4.png",
+  "price": "70",
+  "size": "small",
+  "category": "cooldrink"
+}]
