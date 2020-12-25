@@ -1,33 +1,12 @@
-<section class="hero py-16">
-  <div class="container mx-auto flex items-center justify-between px-16">
-    <div class="w-5/12">
-      <h6 class="text-lg"><em>Hungry??</em></h6>
-      <h1 class="text-6xl font-bold">Don't wait !</h1>
-      <button
-        class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary"
-      >
-        <a
-          href="#items"
-          class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary"
-          >Order Now</a
-        >
-      </button>
-    </div>
-    <div class="w-5/12">
-      <img src="/img/hero-pizza.png" alt="hero-image" />
-    </div>
-  </div>
-</section>
-
 <section class="menu container mx-auto px-16 py-8" id="items">
   <div class="btn-container">
     <a href="/">
-      <button class="filter-btn active" type="button" data-id="all">
+      <button class="filter-btn " type="button" data-id="all">
         All Items
       </button>
     </a>
     <a href="/burger">
-      <button class="filter-btn" type="button" data-id="burger">
+      <button class="filter-btn active" type="button" data-id="burger">
         burger
       </button>
     </a>
@@ -57,13 +36,9 @@
   </div>
 
   <div class="section-center grid grid-cols-4 col-gap-12 row-gap-16">
-    <% all.forEach(function(item){ %>
+    <% burger.forEach(function(item){ %>
     <div class="w-64">
-      <img
-        class="h-40 mb-4 mx-auto"
-        src="/img/<%= item.image%>"
-        alt="allMenu"
-      />
+      <img class="h-40 mb-4 mx-auto" src="/img/<%= item.image%>" alt="burger" />
       <div class="text-center">
         <h2 class="mb-4 text-lg"><%= item.name%></h2>
         <span class="size py-1 px-4 rounded-full uppercase text-xs"

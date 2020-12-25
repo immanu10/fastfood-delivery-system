@@ -10,6 +10,7 @@ function statusController() {
           if (err) {
             return res.redirect("/admin/orders");
           }
+
           return res.redirect("/admin/orders");
         }
       );

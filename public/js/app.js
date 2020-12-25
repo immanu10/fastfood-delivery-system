@@ -26870,6 +26870,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function initAdmin() {
+  console.log("initAdmin");
   var orderTableBody = document.querySelector("#orderTableBody");
   var orders = [];
   var markup;
@@ -26914,15 +26915,91 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var noty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! noty */ "./node_modules/noty/lib/noty.js");
 /* harmony import */ var noty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(noty__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _admin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./admin */ "./resources/js/admin.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _admin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./admin */ "./resources/js/admin.js");
 
 
 
+ // const sectionCenter = document.querySelector(".section-center");
+// const btnContainer = document.querySelector(".btn-container");
+// const menuContainer = document.querySelector(".menu");
+// const menu = JSON.parse(ejectMenu);
+// window.addEventListener("DOMContentLoaded", function() {
+//   displayMenuItems(menu);
+//   displayFilterButtons();
+// });
+// function displayMenuItems(menuItems) {
+//   let displayMenu = menuItems.map(function(item) {
+//     return `<div class="w-64">
+//       <img class="h-40 mb-4 mx-auto" src="/img/${item.image}" alt="menuimg" />
+//       <div class="text-center">
+//         <h2 class="mb-4 text-lg">${item.name}</h2>
+//         <span class="size py-1 px-4 rounded-full uppercase text-xs"
+//           >${item.size}</span
+//         >
+//         <div class="flex items-center justify-around mt-6">
+//           <span class="font-bold text-lg">₹${item.price}</span>
+//           <button
+//             data-pizza='${JSON.stringify(item)}'
+//             class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
+//           >
+//             <span>+</span>
+//             <span class="ml-4">Add</span>
+//           </button>
+//         </div>
+//       </div>
+//     </div>`;
+//   });
+//   displayMenu = displayMenu.join("");
+//   sectionCenter.innerHTML = displayMenu;
+// }
+// function displayFilterButtons() {
+//   const categories = menu.reduce(
+//     function(values, item) {
+//       if (!values.includes(item.category)) {
+//         values.push(item.category);
+//       }
+//       return values;
+//     },
+//     ["all"]
+//   );
+//   let displayFilter = categories.map(function(item) {
+//     if (item === "all")
+//       return `<button class="filter-btn active" type="button" data-id=${item}>${item}</button>`;
+//     else
+//       return `<button class="filter-btn" type="button" data-id=${item}>${item}</button>`;
+//   });
+//   displayFilter = displayFilter.join("");
+//   btnContainer.innerHTML = displayFilter;
+//   const filterBtns = document.querySelectorAll(".filter-btn");
+//   // console.log(filterBtns);
+//   menuContainer.addEventListener("click", function(e) {
+//     const id = e.target.dataset.id;
+//     if (id) {
+//       filterBtns.forEach(function(btn) {
+//         btn.classList.remove("active");
+//         btn.addEventListener("click", function(e) {
+//           const category = e.currentTarget.dataset.id;
+//           const menuCategory = menu.filter(function(menuItem) {
+//             if (menuItem.category === category) {
+//               return menuItem;
+//             }
+//           });
+//           if (category === "all") {
+//             displayMenuItems(menu);
+//           } else {
+//             displayMenuItems(menuCategory);
+//           }
+//         });
+//       });
+//       e.target.classList.add("active");
+//     }
+//   });
+// }
 
-var addToCart = document.querySelectorAll(".add-to-cart");
 var cartCounter = document.querySelector("#cartCounter");
+var addToCart = document.querySelectorAll(".add-to-cart"); // console.log(addToCart);
 
 function updateCart(pizza) {
   axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/update-cart", pizza).then(function (res) {
@@ -26931,23 +27008,24 @@ function updateCart(pizza) {
     new noty__WEBPACK_IMPORTED_MODULE_1___default.a({
       type: "success",
       timeout: 1000,
-      progressBar: false,
-      text: "Item added to Cart"
+      text: "Item added to Cart",
+      progressBar: false
     }).show();
   })["catch"](function (err) {
     new noty__WEBPACK_IMPORTED_MODULE_1___default.a({
       type: "error",
       timeout: 1000,
-      progressBar: false,
-      text: "Something went wrong"
+      text: "Something went wrong",
+      progressBar: false
     }).show();
   });
 }
 
+Object(_admin__WEBPACK_IMPORTED_MODULE_3__["initAdmin"])();
 addToCart.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
-    var pizza = JSON.parse(btn.dataset.pizza); //console.log(pizza);
-
+    var pizza = JSON.parse(e.currentTarget.dataset.pizza);
+    console.log(pizza);
     updateCart(pizza);
   });
 });
@@ -26957,9 +27035,8 @@ if (alertMsg) {
   setTimeout(function () {
     alertMsg.remove();
   }, 2000);
-}
+} // //change order status
 
-Object(_admin__WEBPACK_IMPORTED_MODULE_2__["initAdmin"])(); //change order status
 
 var statuses = document.querySelectorAll(".status_line");
 var hiddenInput = document.querySelector("#hiddenInput");
@@ -26968,11 +27045,11 @@ order = JSON.parse(order);
 var time = document.createElement("small");
 
 function updateStatus(order) {
-  var stepCompleted = true; // statuses.forEach((status) => {
-  //   status.classList.remove("step-completed");
-  //   status.classList.remove("current");
-  // });
-
+  statuses.forEach(function (status) {
+    status.classList.remove("step-completed");
+    status.classList.remove("current");
+  });
+  var stepCompleted = true;
   statuses.forEach(function (status) {
     var dataProp = status.dataset.status;
 
@@ -26982,7 +27059,7 @@ function updateStatus(order) {
 
     if (dataProp === order.status) {
       stepCompleted = false;
-      time.innerText = moment__WEBPACK_IMPORTED_MODULE_3___default()(order.updatedAt).format("hh:mm A");
+      time.innerText = moment__WEBPACK_IMPORTED_MODULE_2___default()(order.updatedAt).format("hh:mm A");
       status.appendChild(time);
 
       if (status.nextElementSibling) {

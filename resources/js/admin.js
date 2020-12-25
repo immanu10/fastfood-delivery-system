@@ -2,6 +2,7 @@ import axios from "axios";
 import moment from "moment";
 
 export function initAdmin() {
+  console.log("initAdmin");
   const orderTableBody = document.querySelector("#orderTableBody");
   let orders = [];
   let markup;

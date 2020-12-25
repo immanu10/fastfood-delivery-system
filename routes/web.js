@@ -1,4 +1,10 @@
 const homeController = require("../app/http/controllers/homeController");
+const burgerController = require("../app/http/controllers/burgerController");
+const pizzaController = require("../app/http/controllers/pizzaController");
+const cooldrinkController = require("../app/http/controllers/cooldrinkController");
+const icecreamController = require("../app/http/controllers/icecreamController");
+const shakesController = require("../app/http/controllers/shakesController");
+const comboController = require("../app/http/controllers/comboController");
 const authController = require("../app/http/controllers/authController");
 const cartController = require("../app/http/controllers/customers/cartController");
 const orderController = require("../app/http/controllers/customers/orderController");
@@ -12,6 +18,12 @@ const admin = require("../app/http/middlewares/admin");
 
 function initRoutes(app) {
   app.get("/", homeController().index);
+  app.get("/burger", burgerController().index);
+  app.get("/pizza", pizzaController().index);
+  app.get("/cooldrink", cooldrinkController().index);
+  app.get("/icecream", icecreamController().index);
+  app.get("/shakes", shakesController().index);
+  app.get("/combo", comboController().index);
   app.get("/login", guest, authController().login);
   app.post("/login", authController().postLogin);
   app.get("/register", guest, authController().register);

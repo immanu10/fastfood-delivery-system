@@ -8,7 +8,7 @@ const session = require("express-session");
 const flash = require("express-flash");
 const MongoDbStore = require("connect-mongo")(session);
 const passport = require("passport");
-
+// const Emitter = require("events");
 const PORT = process.env.PORT || 3000;
 
 const mongoose = require("mongoose");
@@ -35,6 +35,10 @@ let mongoStore = new MongoDbStore({
   mongooseConnection: connection,
   collection: "sessions",
 });
+
+//event emitter
+// const eventEmitter = new Emitter();
+// app.set("eventEmitter", eventEmitter);
 
 // Session config to add cart functionality
 app.use(
@@ -74,6 +78,8 @@ app.set("view engine", "ejs");
 
 require("./routes/web")(app);
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
+
+//Socket.io

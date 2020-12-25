@@ -235,4 +235,46 @@ section.status {
   background-color: #fefde5 !important;
 }
 
-//footer sytle
+//menu filter
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: $clr-black;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: 0.25rem;
+  display: inline-block;
+  transition: $transition;
+  font-size: 0.875rem;
+  border: 2px solid $clr-black;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: $radius;
+}
+.btn:hover {
+  color: $clr-white;
+  background: $clr-black;
+}
+
+.btn-container {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.filter-btn {
+  background: transparent;
+  border-color: $clr-gold;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  border-radius: $radius;
+  padding: 0.375rem 0.75rem;
+  color: $clr-gold;
+  cursor: pointer;
+  transition: $transition;
+}
+.filter-btn:hover,
+.active {
+  background: $clr-gold;
+  color: $clr-white;
+}
