@@ -1,9 +1,13 @@
 <section class="login flex justify-center pt-24">
   <div class="w-full max-w-xs">
-    <form action="/login" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <form
+      action="/login"
+      method="POST"
+      class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+    >
       <% if(messages.error) { %>
-        <span class="text-red-500 text-sm"><%=messages.error %></span>
-        <% } %>
+      <span class="text-red-500 text-sm"><%=messages.error %></span>
+      <% } %>
       <div class="mb-4">
         <label
           class="block text-gray-700 text-sm font-bold mb-2"
@@ -50,7 +54,7 @@
       </div>
     </form>
     <p class="text-center text-gray-500 text-xs">
-      &copy;2020 FoodHub. All rights reserved.
+      &copy;2021 FoodHub. All rights reserved.
     </p>
   </div>
 </section>
